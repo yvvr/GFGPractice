@@ -8,3 +8,5 @@
 /build
 .idea/
 **/build
+/out
+/src/TestProblemMain.java

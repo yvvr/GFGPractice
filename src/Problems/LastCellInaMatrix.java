@@ -98,7 +98,7 @@ public class LastCellInaMatrix {
             // Get the updated cell
             int[] updatedCell = getTraversedCellForDirection(i, j, direction);
             // Continues with same direction.
-            endPointsRecursive(matrix, updatedCell[0], updatedCell[1], R, C, direction);
+            return endPointsRecursive(matrix, updatedCell[0], updatedCell[1], R, C, direction);
         } else if (matrix[i][j] == 1) {
             // Update matrix value to 0.
             matrix[i][j] = 0;
@@ -107,13 +107,13 @@ public class LastCellInaMatrix {
             // Get the updated cell
             int[] updatedCell = getTraversedCellForDirection(i, j, updatedDirection);
             // Continues with same direction.
-            endPointsRecursive(matrix, updatedCell[0], updatedCell[1], R, C, updatedDirection);
+            return endPointsRecursive(matrix, updatedCell[0], updatedCell[1], R, C, updatedDirection);
         }
         return new int[] {i, j};
     }
 
     // Recursion
-    static int[] endPoints(int[][] matrix, int R, int C) {
+    public static int[] endPoints(int[][] matrix, int R, int C) {
         // code here
         return endPointsRecursive(matrix, 0, 0, R - 1, C - 1, Direction.right);
     }

@@ -1,5 +1,9 @@
 package Problems;
 
+import java.util.ArrayList;
+import java.util.Collections;
+import java.util.Stack;
+
 /**
  * This question is asked in Adobe Interview. <br>
  *
@@ -15,4 +19,20 @@ package Problems;
  *
  * https://practice.geeksforgeeks.org/problems/leaders-in-an-array-1587115620/1?page=1&difficulty[]=0&curated[]=1&sortBy=submissions
  */
-public class LeadersInAnArray {}
+public class LeadersInAnArray {
+
+    // Function to find the leaders in the array.
+    public static ArrayList<Integer> leaders(int[] arr, int n) {
+        ArrayList<Integer> leadersList = new ArrayList<>();
+        int currentLeader = Integer.MIN_VALUE;
+        // Find the leaders
+        for (int i = n - 1; i >= 0; i--) {
+            if (arr[i] >= currentLeader) {
+                leadersList.add(arr[i]);
+                currentLeader = arr[i];
+            }
+        }
+        Collections.reverse(leadersList);
+        return leadersList;
+    }
+}

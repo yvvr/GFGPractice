@@ -19,4 +19,6 @@ package Problems;
  *
  * https://practice.geeksforgeeks.org/problems/n-meetings-in-one-room-1587115620/1?page=3&difficulty[]=0&curated[]=1&sortBy=submissions
  */
-public class NMeetingsInOneRoom {}
+public class NMeetingsInOneRoom {
+
+}
